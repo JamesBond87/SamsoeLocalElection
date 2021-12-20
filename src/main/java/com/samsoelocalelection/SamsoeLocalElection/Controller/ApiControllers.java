@@ -15,13 +15,12 @@ public class ApiControllers {
 
     @GetMapping(value = "/")
     public String getPage() {
-        return "Welcome to the Samso Election Details";
+        return "Welcome to the Samsoe Election Details";
     }
-    @GetMapping(value = "/candidates")
+    @GetMapping(value = "/candidates/")
     public List<Candidates> getCandidates() {
         return candidatesRepo.findAll();
     }
-
 
     @PostMapping(value = "/save")
     public String saveCandidates(@RequestBody Candidates candidates) {
